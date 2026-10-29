@@ -1,0 +1,45 @@
+{
+  "manifest_version": "0.3",
+  "name": "mcp-email-verifier",
+  "version": "1.0.0",
+  "description": "MCP server for Email Verifier. Verify email lists on your own ZeroBounce, NeverBounce, MillionVerifier, BounceBan, or Reoon key: one flat row per address with a valid, invalid, catch all, risky, or unknown verdict plus role, free, and disposable flags. Runs on Apify. Clay-ready output.",
+  "author": {
+    "name": "Mamba Labs"
+  },
+  "license": "MIT",
+  "homepage": "https://github.com/mambalabsdev/mcp-email-verifier",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mambalabsdev/mcp-email-verifier"
+  },
+  "server": {
+    "type": "node",
+    "entry_point": "build/index.js",
+    "mcp_config": {
+      "command": "node",
+      "args": [
+        "${__dirname}/build/index.js"
+      ],
+      "env": {
+        "APIFY_TOKEN": "${user_config.apify_token}",
+        "EMAIL_VERIFIER_API_KEY": "${user_config.email_verifier_api_key}"
+      }
+    }
+  },
+  "user_config": {
+    "apify_token": {
+      "type": "string",
+      "title": "Apify API Token",
+      "description": "Apify API token for running the actor",
+      "sensitive": true,
+      "required": false
+    },
+    "email_verifier_api_key": {
+      "type": "string",
+      "title": "Verification service API key",
+      "description": "Your own ZeroBounce, NeverBounce, MillionVerifier, BounceBan, or Reoon key. Sent to the actor run input as a secret field, never stored by Mamba Labs.",
+      "sensitive": true,
+      "required": false
+    }
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "name": "@mambalabsdev/mcp-email-verifier",
+  "version": "1.0.0",
+  "description": "MCP server for Email Verifier. Verify email lists on your own ZeroBounce, NeverBounce, MillionVerifier, BounceBan, or Reoon key: one flat row per address with a valid, invalid, catch all, risky, or unknown verdict plus role, free, and disposable flags. Runs on Apify. Clay-ready output.",
+  "type": "module",
+  "bin": {
+    "mcp-email-verifier": "./build/index.js"
+  },
+  "files": [
+    "build",
+    "README.md",
+    "LICENSE",
+    "SECURITY.md"
+  ],
+  "scripts": {
+    "build": "tsc && chmod +x build/index.js",
+    "test": "npm run build && node --test test/*.test.js",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "email-verification",
+    "email-verifier",
+    "zerobounce",
+    "neverbounce",
+    "millionverifier",
+    "deliverability",
+    "bounce",
+    "apify",
+    "clay"
+  ],
+  "author": "Mamba Labs <labs@mambamindsetgrowth.com>",
+  "license": "MIT",
+  "homepage": "https://apify.com/mambalabs/email-verifier",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mambalabsdev/mcp-email-verifier"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.32.0",
+    "zod": "^4.4.3"
+  },
+  "devDependencies": {
+    "@types/node": "^26.2.0",
+    "typescript": "5.9.3"
+  },
+  "mcpName": "com.mambabuilt/mcp-email-verifier"
+}

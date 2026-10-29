@@ -1,0 +1,15 @@
+{
+  "mcpServers": {
+    "mamba-email-verifier": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@mambalabsdev/mcp-email-verifier"
+      ],
+      "env": {
+        "APIFY_TOKEN": "your-apify-token",
+        "EMAIL_VERIFIER_API_KEY": "your-verification-service-key"
+      }
+    }
+  }
+}
