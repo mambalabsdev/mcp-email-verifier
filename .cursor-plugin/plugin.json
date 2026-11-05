@@ -1,7 +1,7 @@
 {
   "name": "mcp-email-verifier",
   "displayName": "Email Verifier",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "MCP server for Email Verifier. Verify email lists on your own ZeroBounce, NeverBounce, MillionVerifier, BounceBan, or Reoon key: one flat row per address with a valid, invalid, catch all, risky, or unknown verdict plus role, free, and disposable flags. Runs on Apify. Clay-ready output.",
   "author": {
     "name": "Mamba Labs",
